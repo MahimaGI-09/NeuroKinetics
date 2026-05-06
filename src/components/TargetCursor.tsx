@@ -68,7 +68,7 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
 
     let activeTarget: HTMLElement | null = null;
     let currentLeaveHandler: (() => void) | null = null;
-    let resumeTimeout: NodeJS.Timeout | null = null;
+    let resumeTimeout: ReturnType<typeof window.setTimeout> | null = null;
 
     const cleanupTarget = (target: HTMLElement) => {
       if (currentLeaveHandler) {

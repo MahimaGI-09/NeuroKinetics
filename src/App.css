@@ -1095,3 +1095,141 @@
 @media (max-width: 1024px) {
   .session-layout { grid-template-columns: 1fr; }
 }
+
+/* Auth pages */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 24px 60px;
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.auth-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.auth-icon {
+  font-size: 3rem;
+  width: 72px;
+  height: 72px;
+  background: var(--bg-surface);
+  border: var(--border-thick);
+  border-radius: var(--radius-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-solid);
+  margin-bottom: 8px;
+}
+
+.auth-error {
+  background: rgba(255, 0, 84, 0.12);
+  border: 2px solid var(--accent-red);
+  border-radius: var(--radius-main);
+  color: var(--accent-red);
+  padding: 12px 16px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.auth-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.auth-label {
+  font-family: var(--font-pixel);
+  font-size: 1rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.5px;
+}
+
+.auth-input {
+  background: var(--bg-surface);
+  border: var(--border-thick);
+  border-radius: var(--radius-main);
+  padding: 12px 16px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+}
+
+.auth-input::placeholder {
+  color: var(--text-muted);
+}
+
+.auth-input:focus {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 0 3px rgba(0, 229, 255, 0.15);
+}
+
+.auth-role-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.role-btn {
+  padding: 12px;
+  font-family: var(--font-pixel);
+  font-size: 1rem;
+  border: var(--border-thick);
+  border-radius: var(--radius-main);
+  background: var(--bg-surface);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-solid);
+}
+
+.role-btn:hover {
+  background: var(--bg-card-hover);
+  color: var(--text-primary);
+}
+
+.role-btn.active {
+  background: var(--accent-purple);
+  color: #fff;
+  border-color: var(--accent-purple);
+}
+
+.auth-switch {
+  text-align: center;
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+}
+
+.auth-switch a {
+  color: var(--accent-cyan);
+  font-weight: 600;
+}
+
+.auth-switch a:hover {
+  color: var(--accent-purple);
+}

@@ -1,9 +1,11 @@
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
+from pathlib import Path
 
 # SQLite for local dev — swap this URL for PostgreSQL in production
-SQLALCHEMY_DATABASE_URL = "sqlite:///./neurokinetics.db"
+DB_PATH = Path(__file__).resolve().parent / "neurokinetics.db"
+SQLALCHEMY_DATABASE_URL = f"sqlite:///{DB_PATH}"
 
 engine = create_engine(
     SQLALCHEMY_DATABASE_URL,

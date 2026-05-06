@@ -27,8 +27,8 @@ export default function Navbar() {
           <li><Link to="/dashboard" className={`cursor-target ${location.pathname === '/dashboard' ? 'active' : ''}`}>Dashboard</Link></li>
         </ul>
         <div className="navbar-cta">
-          <button className="btn btn-secondary cursor-target">Log In</button>
-          <button className="btn btn-primary cursor-target">Get Started</button>
+          <Link to="/login" className="btn btn-secondary cursor-target">Log In</Link>
+          <Link to="/register" className="btn btn-primary cursor-target">Get Started</Link>
           <button 
             className="theme-toggle cursor-target" 
             onClick={toggleTheme}
